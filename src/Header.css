@@ -11,38 +11,85 @@
         width: 100px;
         margin-left: 20px;
     }
-
-    .Header-search { 
-        font-weight: bold
-    }
-    .Header-search input{ 
-        width: 100%
-    }
-
-    .Header-navItems { 
-        display:flex; 
-
-    }
-.Header-searchIconcontainer{ 
-
-}
-
 .Header-search{ 
+    display: flex;
+    flex: 1;
+    align-items: center;
+    border-radius : 24px;
+}
+.Header-searchIconContainer { 
+    padding: 5px;
+    height: 23px;
+        background-color: #f08804;
+    
+    
+    /* overflow:hidden; */
 
 }
-    
+.Header-searchInput { 
+    padding:10px ; 
+    height: 13px; 
+    border:none;
+    width:100%
+    /* border-radius: 5px; */
+
+
+
+}
 .Header-optionCart{ 
     display: flex ; 
+    margin-top: 10px;
     align-items: center; 
-    padding: 9px;
-
+    /* padding: 9px; */
+        font-weight: bold;
+    display: flex;
+    flex-direction: column; font-weight: 900;
+     padding-left: 4px;
+      /* margin-top: -10px; */
 }
-.HHeader-cartCount{ 
+    
+
+
+.Header-optionCartCount{ 
+  color: #f08804; 
+  font-size: small;
+}
+
+.Header-cartword{ 
+    margin-top: 30px;
+    font-size: small;
     font-weight: bold;
-    color: #f08804;
-    padding-left: 4px; 
 }
 .Header a{ 
     display: flex;
     color:white; 
+    text-decoration: none;
+    
 }
+.Header-navItems { 
+        display:flex; 
+        justify-content: space-evenly;
+        padding: 20px;
+
+
+    }
+
+
+.Header-option{ 
+    display: flex;
+    flex-direction: column;
+    padding:20px;
+
+}
+.Header-optionLineOne{ 
+    
+    font-weight: 200;
+    font-size: small;
+}
+.Header-optionLineTwo{ 
+    font-size: small;
+    font-weight: bolder;
+}
+    
+
+    

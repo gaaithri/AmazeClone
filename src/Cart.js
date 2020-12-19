@@ -1,11 +1,31 @@
-import React from 'react'
+import { useEffect } from 'react';
+import CartItems from './CartItems';
+import CartTotal from './CartTotal';
+import './Cart.css';
+import { db } from './Firebase';
+function Cart(props) {
+    // useEffect(() => {
+    //     db.collection('cartItems').onSnapshot((snapshot)=> { 
+    //         let tempCartItems = []
+    //         console.log(snapshot)=> 
+    //         snapshot.docs.map((doc) => {
+    //             tempCartItems.push({
+    //                 id: doc.id,
+    //                 cartItem: doc.data()
+    //             });
+    //         });
+    //         setProducts(tempCartItems);
+    //     });
+    // }, []);
 
-function Cart() {
+
+
     return (
-        <div>
-            
+        <div className="cart">
+            <CartItems cartItems={props.cartItems} />
+            <CartTotal cartTotal={props.cartTotal} />
         </div>
-    )
+    );
 }
 
-export default Cart
+export default Cart;

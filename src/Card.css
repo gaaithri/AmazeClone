@@ -1,0 +1,29 @@
+.Card-container { 
+    display: flex;
+    justify-content:space-around;
+    z-index: 1;
+    padding: 60px;
+}
+.Card { 
+   display: flex; 
+   flex-direction: column;
+   /* justify-content: space-between; */
+   background-color: ivory;
+   width: 220px;
+   height: 300px;
+   padding: 20px;
+   margin: 0px;
+}
+
+.Card img { 
+    margin-top: 10px;
+    margin-bottom: 5px;
+    height: 200px;
+}
+.showtext, a { 
+    font-size: 13px;
+    font-weight: 500;
+    color: #007185;
+    text-decoration: none;
+    display: block;
+}

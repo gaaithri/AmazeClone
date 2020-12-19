@@ -9,7 +9,19 @@ import {
 import SearchIcon from '@material-ui/icons/Search';
 import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
 // import ShoppingBasketIcon from '@material-ui/icons/ShoppingBasket'
-export default function Header() {
+export default function Header(props) {
+    const getCount =() => { 
+        // init count with 0 
+        // loop through all the items
+        // add qty to count
+        // return it 
+        let count = 0 ; 
+        props.cartItems.forEach(item => { 
+            count += item.cartItem.quantity 
+        }); 
+        console.log (count)
+        return count
+    }
     return (
         <Router>
         <div className="Header">
@@ -19,16 +31,20 @@ export default function Header() {
                     <img src="https://mikekitko.com/wp-content/uploads/2019/10/amazon-logo-white-768x232.png " alt="logo" />
 
                 </div>
+                
+                    
+               
             </Link>
             {/* address */}
             <div className="Header-optionAddress">
-                {/* icon */}
+                {/*google map icon */}
+                
                 <div className="Header-option">
                     <span className="Header-optionLineOne">
-
+                   Deliver to User
                     </span>
                     <span className="Header-optionLineTwo">
-
+                     Bengaluru 560024
                     </span>
                 </div>
                 {/* Hello  */}
@@ -59,18 +75,23 @@ export default function Header() {
                         Returns
                     </span>
                     <span className="Header-optionLineTwo">
-                        Orders
+                       & Orders
                     </span>
                 </div>
 
                 {/* Cart */}
                 <Link to="/cart">
-                    <div className="Header-optionCart">
-                        <ShoppingCartIcon />
-                        <span className="Header-cartCount">
-                            20
-                    </span>
-                    </div>
+                <div className="Header-optionCart">
+                            <span className="Header-optionCartCount">
+                               {getcount()} </span>
+                        <ShoppingCartIcon/>
+                       
+                            
+                           
+                            </div>
+                         <div className="Header-cartword">Cart</div>
+               
+                    
                 </Link>
 
             </div>
