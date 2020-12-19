@@ -1,0 +1,48 @@
+.Header { 
+    background-color: #0f1111; 
+    color: white;
+    height: 60px; 
+    display: flex;
+    align-items:center; 
+    justify-content:space-between;
+    }
+
+    .Header img { 
+        width: 100px;
+        margin-left: 20px;
+    }
+
+    .Header-search { 
+        font-weight: bold
+    }
+    .Header-search input{ 
+        width: 100%
+    }
+
+    .Header-navItems { 
+        display:flex; 
+
+    }
+.Header-searchIconcontainer{ 
+
+}
+
+.Header-search{ 
+
+}
+    
+.Header-optionCart{ 
+    display: flex ; 
+    align-items: center; 
+    padding: 9px;
+
+}
+.HHeader-cartCount{ 
+    font-weight: bold;
+    color: #f08804;
+    padding-left: 4px; 
+}
+.Header a{ 
+    display: flex;
+    color:white; 
+}
