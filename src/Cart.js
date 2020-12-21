@@ -2,7 +2,7 @@ import { useEffect } from 'react';
 import CartItems from './CartItems';
 import CartTotal from './CartTotal';
 import './Cart.css';
-import { db } from './Firebase';
+import db from './Firebase';
 function Cart(props) {
     // useEffect(() => {
     //     db.collection('cartItems').onSnapshot((snapshot)=> { 
@@ -23,7 +23,7 @@ function Cart(props) {
     return (
         <div className="cart">
             <CartItems cartItems={props.cartItems} />
-            <CartTotal cartTotal={props.cartTotal} />
+            <CartTotal cartItems={props.cartItems} />
         </div>
     );
 }

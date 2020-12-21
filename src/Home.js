@@ -3,7 +3,7 @@ import Product from './Product';
 import './Home.css';
 import Card from './Card';
 import db from './Firebase';
-import data from './data'
+import data from './data';
 
 function Home() {
 
@@ -36,16 +36,16 @@ function Home() {
 
                 </div>
                 <div className="Home-content">
-                <div className="Card-content">
-                    {data.map(item => (
-                    <Card 
-                    key={item.headline} 
-                    headline={item.headline}
-                    image={item.image}
-                    />
-                    ))}
+                    <div className="Card-content">
+                        {data.map(item => (
+                            <Card
+                                key={item.headline}
+                                headline={item.headline}
+                                image={item.image}
+                            />
+                        ))}
                     </div>
-                   
+
 
                     <div className="Home-row">
                         {
@@ -59,7 +59,7 @@ function Home() {
                                 />
                             ))
                         }
-                        
+
                     </div>
 
                     <div className="Home-row">
@@ -67,6 +67,7 @@ function Home() {
                             products.slice(2, 5).map((product) => (
                                 <Product
                                     key={product.id}
+                                    id={product.id}
                                     title={product.product.title}
                                     price={product.product.price}
                                     rating={product.product.rating}

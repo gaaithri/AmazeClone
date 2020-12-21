@@ -1,11 +1,6 @@
 import React from 'react';
 import './Card.css';
-// import {
-//   BrowserRouter as Router,
-//   Switch,
-//   Route,
-//   Link
-// } from "react-router-dom"; 
+
 function card(props) {
     // console.log(props);
     return (

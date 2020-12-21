@@ -1,13 +1,23 @@
 import React from 'react';
-function CartItem() {
-    const deleteqty =() =>  { 
-        
+import db from './Firebase';
+function CartItem(props) {
+    const deleteQty = () => {
+        console.log(props);
+        db.collection('cartItems').doc(props.id).delete()
+        .then(()=> console.log("Documents Deleted successfully")
+        )
+        .catch(()=> console.log('')
 
-    }
+        
+    };
+
+    const updateQty = (id, e) => {
+        db.collection('cartItems').doc(id).set(e.target.value);
+    };
     return (
         <div className="CartItem">
             <div className="CartItem-image">
-                <img src="https://m.media-amazon.com/images/I/81zKcC5wJ6L._AC_SL1500_.jpg" />
+                <img src="https://m.media-amazon.com/images/I/81zKcC5wJ6L._AC_SL1500_.jpg" alt="images" />
             </div>
             <div className="CartItem-info">
                 <div className="CartItem-title">
@@ -21,7 +31,7 @@ function CartItem() {
                             <option value="3">Qty: 3</option>
                         </select>
                     </div>
-                    <div className="CartItem-delete">
+                    <div className="CartItem-delete" onClick={deleteQty} >
                         Delete
                     </div>
                 </div>
