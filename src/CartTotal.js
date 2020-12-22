@@ -7,7 +7,7 @@ function CartTotal(props) {
     const getTotalPrice = () => {
         let total = 0;
         props.cartItems.forEach((item) =>
-          {  total += (parseInt(item.cartItem.price) * parseInt(item.cartItem.qty))});
+          {  total += (parseInt(item.cartItem.price) * parseInt(item.cartItem.quantity))});
 
         return total;
     };
@@ -18,7 +18,7 @@ function CartTotal(props) {
         // return it 
         let count = 0;
         props.cartItems.forEach(item => {
-            count += parseInt(item.cartItem.qty);
+            count += parseInt(item.cartItem.quantity);
         });
         console.log(count);
         return count;

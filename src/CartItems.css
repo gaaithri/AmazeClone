@@ -1,29 +1,12 @@
 .CartItems{ 
     flex:0.7;
-    background-color: white;
+    /* background-color: white; */
     margin-right: 18px;
     padding:20px;
 }
-.CartItem{ 
-    display: flex;
-    margin-top: 10px;
-}
 .CartItems-items{ 
     display:flex;
+    flex-direction: column;
     padding-top:12px;
     padding-bottom:12px;
-}
-
-.CartItem-image{ 
-    width: 180px; 
-    height: 180px;
-    margin-right:16px;
-
-    
-}
-.CartItem-image img{ 
-    width: 100%; 
-    height: 100%;
-    object-fit: contain;
-   
 }

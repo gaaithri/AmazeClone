@@ -22,6 +22,7 @@ function Cart(props) {
 
     return (
         <div className="cart">
+            
             <CartItems cartItems={props.cartItems} />
             <CartTotal cartItems={props.cartItems} />
         </div>

@@ -1,6 +1,6 @@
 import React from 'react';
 import './CartItems.css';
-import CartItem from './CartItem'
+import CartItem from './CartItem';
 
 function CartItems(props) {
 
@@ -12,8 +12,8 @@ function CartItems(props) {
             <div className="CartItems-items">
                 {props.cartItems.map((item) => {
                     return <CartItem
-                    id={item.id}
-                    cartItem={item.cartItem}/>;
+                        id={item.id}
+                        cartItem={item.cartItem} />;
                 })}
             </div>
         </div>

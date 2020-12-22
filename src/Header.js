@@ -17,7 +17,7 @@ export default function Header(props) {
         // return it 
         let count = 0;
         props.cartItems.forEach(item => {
-            count += parseInt(item.cartItem.qty);
+            count += parseInt(item.cartItem.quantity);
         });
         console.log("This is cart" ,count);
         return count;
@@ -26,15 +26,13 @@ export default function Header(props) {
         <Router>
             <div className="Header">
                 {/* Logo */}
-                <Link to="/">
+               
                     <div className="Header-logo">
+                    <Link to={"/"}>
                         <img src="https://mikekitko.com/wp-content/uploads/2019/10/amazon-logo-white-768x232.png " alt="logo" />
-
+                    </Link>
                     </div>
-
-
-
-                </Link>
+          
                 {/* address */}
                 <div className="Header-optionAddress">
                     {/*google map icon */}

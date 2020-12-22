@@ -1,43 +1,47 @@
 import React from 'react';
 import db from './Firebase';
+import './CartItem.css';
 function CartItem(props) {
+    console.log(props);
     const deleteQty = () => {
         console.log(props);
-        db.collection('cartItems').doc(props.id).delete()
-        .then(()=> console.log("Documents Deleted successfully")
-        )
-        .catch(()=> console.log('')
-
-        
+        db.collection('cartItems').doc(props.id).delete();
     };
 
-    const updateQty = (id, e) => {
-        db.collection('cartItems').doc(id).set(e.target.value);
+    const updateQty = (e) => {
+        db.collection('cartItems').doc(props.id).update({quantity:parseInt(e.target.value)});
     };
     return (
         <div className="CartItem">
             <div className="CartItem-image">
-                <img src="https://m.media-amazon.com/images/I/81zKcC5wJ6L._AC_SL1500_.jpg" alt="images" />
+                <img src={props.cartItem.image} alt="images" />
             </div>
             <div className="CartItem-info">
                 <div className="CartItem-title">
-                    New Apple MacBook Pro with Apple M1 Chip
+                    {props.cartItem.title}
+                </div>
+                <div className="CartItem-price">
+                   price: {props.cartItem.price}
                 </div>
                 <div className="CartItem-actions">
                     <div className="CartItem-quantity">
-                        <select>
+                        <select value ={props.cartItem.quantity} onChange={updateQty}>
                             <option value="1">Qty: 1</option>
                             <option value="2">Qty: 2</option>
                             <option value="3">Qty: 3</option>
+                            <option value="4">Qty: 4</option>
+                            <option value="5">Qty: 5</option>
+
+
                         </select>
                     </div>
                     <div className="CartItem-delete" onClick={deleteQty} >
                         Delete
                     </div>
                 </div>
+                
             </div>
-            <div className="CartItem-price">
-            </div>
+            
         </div>
     );
 }
