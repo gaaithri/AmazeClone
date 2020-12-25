@@ -23,7 +23,7 @@ export default function Header(props) {
         return count;
     };
     return (
-        <Router>
+   
             <div className="Header">
                 {/* Logo */}
                
@@ -95,8 +95,7 @@ export default function Header(props) {
                 </div>
 
             </div>
-        </Router>
-
+    
 
 
     );
