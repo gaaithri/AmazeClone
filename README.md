@@ -13,7 +13,8 @@ React Hooks is being used in this project.
 
 ## Features: 
 
-**Landing Page** : The User can do the following actions in the Landing Page
+### Landing Page
+**The User can do the following actions in the Landing Page**
 
 The Web App displays list of products on the landing page that are retrieved from the firestore database.
 
@@ -21,7 +22,8 @@ The Web App displays list of products on the landing page that are retrieved fro
 
 **View Itemcount**: The user will be shown in the Header how many items have been added to the cart.
 
-**Cart Page**: The User can do the following actions in the Cart Page 
+### Cart Page 
+**The User can do the following actions in the Cart Page **
 
 **Edit the Quantity**: Increase/Decrease the quantity of products from the Cart list Page by selecting the quantity of items.
 
