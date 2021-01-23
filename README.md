@@ -1,4 +1,4 @@
-# AmazeClone 
+# AmazeClone https://shoppincart-333.web.app/
 This is an WebApp built using the ReactJS and Firebase.
 
 While frontend-UI is developed using ReactJS.
