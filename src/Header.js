@@ -1,7 +1,7 @@
 import React from 'react';
 import './Header.css';
 import {
-   
+
     Link
 } from "react-router-dom";
 import SearchIcon from '@material-ui/icons/Search';
@@ -12,7 +12,7 @@ import { getCartItemsCount } from './components/reducer/reducer';
 
 export default function Header() {
 
-    const [state, dispatch] = useStateValue();
+    const [state] = useStateValue();
 
     /* const getCount = () => {
         // init count with 0 
@@ -28,15 +28,17 @@ export default function Header() {
     }; */
     return (
 
+
+
+
         <div className="Header">
             {/* Logo */}
-            <Link to="/">
-                <div className="Header-logo">
 
+            <div className="Header-logo">
+                <Link to={"/"}>
                     <img src="https://mikekitko.com/wp-content/uploads/2019/10/amazon-logo-white-768x232.png " alt="logo" />
-
-                </div>
-            </Link>
+                </Link>
+            </div>
 
             {/* address */}
             <div className="Header-optionAddress">
@@ -45,6 +47,7 @@ export default function Header() {
                 <div className="Header-option">
                     <span className="Header-optionLineOne">
                         Deliver to User
+
                     </span>
                     <span className="Header-optionLineTwo">
                         Bengaluru 560024
@@ -103,7 +106,11 @@ export default function Header() {
 
             </div>
 
+
         </div>
+
+
+
 
 
 
