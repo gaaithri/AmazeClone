@@ -1,5 +1,5 @@
 # AmazeClone 
-The application is accessible at [AmaoznClone](https://shoppincart-333.web.app/).
+The application is accessible at [AmazonClone](https://shoppincart-333.web.app/).
 
 This is an WebApp built using the ReactJS and Firebase.
 The application enables the user to add, edit quantity and delete the items added to the cart .
