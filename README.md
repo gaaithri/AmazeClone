@@ -1,5 +1,7 @@
-# AmazeClone https://shoppincart-333.web.app/
+# AmazeClone 
+The application is accessible at [AmaonClone](https://shoppincart-333.web.app/)
 This is an WebApp built using the ReactJS and Firebase.
+The application enables the user to add, edit quantity and delete the items added to the cart .
 
 While frontend-UI is developed using ReactJS.
 
@@ -54,18 +56,4 @@ The Web App displays list of products on the landing page that are retrieved fro
 
 
 
-### Create React App
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
-## Available Scripts
-
-In the project directory, you can run:
-
-### `yarn start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
 
