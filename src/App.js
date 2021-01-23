@@ -10,35 +10,38 @@ import {
   BrowserRouter as Router,
   Switch,
   Route,
-  Link
+ 
 } from "react-router-dom";
 function App() {
-  const [cartItems, setCartItems] = useState([]);
-  useEffect(() => {
-    db.collection('cartItems').onSnapshot((snapshot) => {
-      let tempCartItems = [];
-      snapshot.docs.map((doc) => {
-        tempCartItems.push({
-          id: doc.id,
-          cartItem: doc.data()
-        });
-      });
-      // console.log(tempCartItems)
-      setCartItems(tempCartItems);
-    });
-  }, []);
-  return (
+  // const [cartItems, setCartItems] = useState([]);
+  // useEffect(() => {
+  //   db.collection('cartItems').onSnapshot((snapshot) => {
+  //     let tempCartItems = [];
+  //     snapshot.docs.map((doc) => {
+  //       tempCartItems.push({
+  //         id: doc.id,
+  //         cartItem: doc.data()
+  //       });
+  //     });
+  //     // console.log(tempCartItems)
+  //     setCartItems(tempCartItems);
+  //   });
+  // }, []);
+   return (
     <Router>
       <div className="App">
-        <Header
-          cartItems={cartItems} />
+        {/* <Header
+          cartItems={cartItems} /> */}
 
         <Switch>
-          <Route path="/cart">
-            <Cart cartItems={cartItems}></Cart>
+          <Route exact path="/cart">
+            <Header/>
+            {/* <Cart cartItems={cartItems} /> */}
+            <Cart/>
           </Route>
           <Route path="/">
-            <Home/>
+            <Header />
+            <Home />
           </Route>
         </Switch>
       </div>

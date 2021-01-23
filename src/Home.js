@@ -17,6 +17,7 @@ function Home() {
                     id: doc.id,
                     product: doc.data()
                 });
+                 return ("")
             });
             setProducts(tempProducts);
         });
@@ -52,6 +53,7 @@ function Home() {
                             products.slice(0, 2).map((product) => (
                                 <Product
                                     key={product.id}
+                                    id={product.id}
                                     title={product.product.title}
                                     price={product.product.price}
                                     rating={product.product.rating}

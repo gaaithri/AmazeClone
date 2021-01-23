@@ -6,7 +6,8 @@
 }
 .CartItems-items{ 
     display:flex;
-    flex-direction: column;
+    justify-content: space-between;
+    /* flex-direction: column; */
     padding-top:12px;
     padding-bottom:12px;
 }
